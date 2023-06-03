@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'books-frontend';
+  counter = 0;
+
+  constructor() {
+  }
+
+  increment() {
+    this.counter = this.counter + 1;
+  }
 }
