@@ -1,5 +1,8 @@
-<div class="h-12 bg-white shadow border border-gray-300 flex items-center">
+<div class="h-12 bg-white shadow border border-gray-300 flex items-center justify-between">
   <h2 class="font-bold p-4">
     Books <span class="text-green-600">App</span>
   </h2>
+  <div>
+    <a (click)="logout(); $event.preventDefault()" href="">Logout</a>
+  </div>
 </div>
