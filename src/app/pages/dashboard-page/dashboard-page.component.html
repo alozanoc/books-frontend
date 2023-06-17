@@ -1,0 +1,40 @@
+<div class="p-4">
+  <!-- Header -->
+  <div class="mb-4">
+    <mat-form-field class="example-full-width">
+      <mat-label>Buscador</mat-label>
+      <input #searchInput matInput [(ngModel)]="q" placeholder="Ex. Harry Potter" (keyup.enter)="search()">
+      <button matSuffix mat-icon-button aria-label="Buscar" (click)="search()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="bg-white shadow p-4 border rounded">
+    <div class="flex flex-wrap">
+      <div *ngIf="!books.content?.length" class="text-center w-full text-gray-300 font-bold py-10">
+        No se encontraron resultados para la búsqueda: {{ q }}
+      </div>
+      <!-- Grilla de libros -->
+      <div *ngFor="let book of books.content" class="p-2 w-1/3">
+        <div class="bg-gray-400 rounded-md overflow-hidden">
+          <div class="shadow-xl">
+            <div><img src="https://loremflickr.com/640/360" alt=""></div>
+            <div class="p-4">
+              <div class="text-white text-2xl">{{ book.title }}</div>
+              <div class="text-gray-100">{{ book.description }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <mat-paginator [length]="books.totalElements"
+                     [pageSize]="books.pageable.pageSize"
+                     [pageIndex]="books.pageable.pageNumber"
+                     (page)="changePage($event)"
+                     aria-label="Select page">
+      </mat-paginator>
+    </div>
+
+  </div>
+</div>
