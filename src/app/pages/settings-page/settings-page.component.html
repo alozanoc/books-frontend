@@ -1,3 +1,30 @@
-<div class="border border-red-500 border-4">
-  <router-outlet></router-outlet>
+<div class="flex h-full flex-row">
+  <!-- Sidebar -->
+  <div class="h-full">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+
+    <div class="flex flex-row bg-gray-100 h-full">
+      <div class="flex flex-col w-56 bg-white overflow-hidden h-full">
+        <ul class="flex flex-col py-4">
+          <li>
+            <a routerLink="/intranet/settings/general/" routerLinkActive="link-active" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+              <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-home"></i></span>
+              <span class="text-sm font-medium">General</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/intranet/settings/user" routerLinkActive="link-active" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+              <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-music"></i></span>
+              <span class="text-sm font-medium">User</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Content -->
+  <div class="p-4 w-full">
+    <router-outlet></router-outlet>
+  </div>
 </div>
+
