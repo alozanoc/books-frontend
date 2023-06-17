@@ -12,5 +12,8 @@ export class NavbarComponent {
   async logout() {
     await this.authenticationService.logout();
   }
+  get name() {
+    return this.authenticationService.credentials?.name
+  }
 
 }
