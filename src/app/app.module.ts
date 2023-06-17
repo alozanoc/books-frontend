@@ -16,6 +16,12 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
+import { UserSettingsComponent } from './pages/settings-page/components/user-settings/user-settings.component';
+import { IntranetSkeletonComponent } from './skeleton/intranet-skeleton/intranet-skeleton.component';
+import { GeneralSettingsComponent } from './pages/settings-page/components/general-settings/general-settings.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { MatButtonModule } from "@angular/material/button";
     NavbarComponent,
     DashboardPageComponent,
     AboutPageComponent,
-    Page404Component
+    Page404Component,
+    LandingPageComponent,
+    LoginPageComponent,
+    SettingsPageComponent,
+    UserSettingsComponent,
+    IntranetSkeletonComponent,
+    GeneralSettingsComponent
   ],
   imports: [
     BrowserModule,

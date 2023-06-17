@@ -1,0 +1,14 @@
+<div class="flex w-full flex-col h-full">
+  <!-- Navbar -->
+  <app-navbar></app-navbar>
+  <!-- Content wrapper -->
+  <div class="flex flex-row flex-grow">
+    <!-- Sidebar -->
+    <app-sidebar class="h-full"></app-sidebar>
+    <!-- Page -->
+    <div class="flex-grow bg-gray-50">
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+</div>
